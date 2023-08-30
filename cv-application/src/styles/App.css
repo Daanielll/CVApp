@@ -1,0 +1,8 @@
+body {
+  background-color: var(--bg-color);
+}
+.all {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

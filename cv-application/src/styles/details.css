@@ -1,0 +1,50 @@
+:root {
+  --bg-color: rgb(239, 241, 242);
+}
+* {
+  box-sizing: border-box;
+}
+form {
+  width: 30rem;
+  background-color: white;
+  padding: 1.2rem 0rem;
+  border-radius: 6px;
+  box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, 0.2);
+}
+
+form h1 {
+  margin: 0 1.25rem;
+  font-size: 1.75rem;
+}
+.input-div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1.5rem;
+  background-color: white;
+}
+.start-end-div {
+  display: flex;
+  gap: 2.5rem;
+  margin: 1rem 1.5rem;
+}
+.start-end-div > .input-div {
+  margin: 0;
+}
+input,
+textarea {
+  display: block;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--bg-color);
+}
+textarea {
+  resize: vertical;
+  min-height: 1rem;
+  max-height: 10rem;
+}
+label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
