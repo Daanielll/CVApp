@@ -1,19 +1,27 @@
-import { useState } from "react";
 import "../styles/details.css";
-export function EducationalInformation({ details, onUpdate }) {
-  const [eduDetails, setEduDetails] = useState(details);
+export function EducationalInformation({
+  details = [],
+  setDetails,
+  index = 0,
+  onSubmit,
+  focused,
+  setFocused,
+  deleteItem,
+  type,
+}) {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     const det = {
-      ...eduDetails,
+      ...details[index],
       [name]: value,
     };
-    setEduDetails(det);
-    onUpdate(det);
+    const allDet = [...details];
+    allDet[index] = det;
+    setDetails(allDet);
+    //console.log(name, value, index, details);
   };
   return (
-    <form>
-      <h1>Education</h1>
+    <form onSubmit={onSubmit}>
       <div className="input-div">
         <label htmlFor="details-school">School</label>
         <input
@@ -21,7 +29,7 @@ export function EducationalInformation({ details, onUpdate }) {
           name="school"
           placeholder="Enter School / University"
           id="details-school"
-          value={eduDetails.school}
+          value={details[index].school}
           onChange={handleInputChange}
         />
       </div>
@@ -32,7 +40,7 @@ export function EducationalInformation({ details, onUpdate }) {
           name="degree"
           placeholder="Enter Degree"
           id="details-degree"
-          value={eduDetails.degree}
+          value={details[index].degree}
           onChange={handleInputChange}
         />
       </div>
@@ -42,7 +50,7 @@ export function EducationalInformation({ details, onUpdate }) {
           <input
             type="date"
             name="startDate"
-            value={eduDetails.startDate}
+            value={details[index].startDate}
             onChange={handleInputChange}
             id="details-start-date"
           />
@@ -52,7 +60,7 @@ export function EducationalInformation({ details, onUpdate }) {
           <input
             type="date"
             name="endDate"
-            value={eduDetails.endDate}
+            value={details[index].endDate}
             onChange={handleInputChange}
             id="details-end-date"
           />
@@ -65,9 +73,29 @@ export function EducationalInformation({ details, onUpdate }) {
           name="location"
           placeholder="Enter location"
           id="details-location"
-          value={eduDetails.location}
+          value={details[index].location}
           onChange={handleInputChange}
         />
+      </div>
+
+      <div className={`submit-div ${type}`}>
+        {type != "new" && (
+          <button type="button" onClick={deleteItem}>
+            <i className="fa-solid fa-trash"></i> Delete
+          </button>
+        )}
+
+        <div>
+          <button
+            type="button"
+            onClick={() => {
+              setFocused(!focused);
+            }}
+          >
+            Cancel
+          </button>
+          <button type="submit">Submit</button>
+        </div>
       </div>
     </form>
   );

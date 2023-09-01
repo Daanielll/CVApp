@@ -26,20 +26,24 @@
   padding-top: 1rem;
   gap: 0.6rem;
 }
-.extended-forms > div {
-  border: 1px solid var(--font-color);
-  border-radius: 6px;
+.extended-btn {
+  border: none;
+  border-bottom: 1px solid var(--font-color);
+  background-color: #fff;
   width: 100%;
   padding: 1rem;
   font-weight: 500;
   font-size: 1.15rem;
+  text-align: left;
+  cursor: pointer;
 }
-.extended-forms > button {
+#new-btn {
   cursor: pointer;
   border: none;
-  background-color: var(--bg-color);
-  font-size: 1.3rem;
-  padding: 0.7rem 2.1rem;
-  border-radius: 6px;
+  font-size: 1.1rem;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
   border: 1px solid var(--font-color);
+  background-color: #fff;
+  margin-top: 7px;
 }

@@ -7,15 +7,9 @@
 form {
   width: 30rem;
   background-color: white;
-  padding: 1.2rem 0rem;
   border-radius: 6px;
-  box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, 0.2);
 }
 
-form h1 {
-  margin: 0 1.25rem;
-  font-size: 1.75rem;
-}
 .input-div {
   display: flex;
   flex-direction: column;
@@ -45,6 +39,36 @@ textarea {
 }
 label {
   font-weight: 600;
-  font-size: 1.1rem;
   margin-bottom: 5px;
+}
+.submit-div {
+  margin-inline: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.submit-div > div {
+  display: flex;
+  gap: 1rem;
+}
+.submit-div button {
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid rgb(133, 133, 133);
+  color: rgb(133, 133, 133);
+}
+.submit-div i {
+  color: rgb(133, 133, 133);
+  margin-right: 5px;
+}
+.submit-div div :nth-child(2) {
+  background-color: rgb(10, 137, 255);
+  color: white;
+  border-color: rgb(10, 137, 255);
+}
+.new {
+  justify-content: right;
 }
