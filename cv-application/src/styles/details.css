@@ -1,6 +1,3 @@
-:root {
-  --bg-color: rgb(239, 241, 242);
-}
 * {
   box-sizing: border-box;
 }
@@ -65,10 +62,17 @@ label {
   margin-right: 5px;
 }
 .submit-div div :nth-child(2) {
-  background-color: rgb(10, 137, 255);
+  background-color: #fca311;
   color: white;
-  border-color: rgb(10, 137, 255);
+  border-color: #fca311;
 }
 .new {
   justify-content: right;
+}
+form > h1 {
+  margin: 1.2rem 1.25rem 0 1.25rem;
+  font-size: 1.75rem;
+}
+#general-div {
+  box-shadow: 0 0 15px 0 hsla(240, 5%, 41%, 0.2);
 }

@@ -59,7 +59,7 @@ export function ExpandableForm({ details, setDetails, formType }) {
 
   return (
     <div className={`expandable-cont ${expanded}`}>
-      <div onClick={toggleExpansion}>
+      <div id="heading" onClick={toggleExpansion}>
         <h1>{formType}</h1>
         {expanded ? (
           <i className="fa-solid fa-chevron-up"></i>

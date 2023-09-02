@@ -22,7 +22,7 @@ export function ExperienceInformation({
   return (
     <form onSubmit={onSubmit}>
       <div className="input-div">
-        <label htmlFor="details-companyName">Company Name</label>
+        <label htmlFor="details-companyName">Company Name *</label>
         <input
           type="text"
           name="companyName"
@@ -30,6 +30,7 @@ export function ExperienceInformation({
           id="details-companyName"
           value={details[index].companyName}
           onChange={handleInputChange}
+          required
         />
       </div>
       <div className="input-div">
@@ -70,7 +71,7 @@ export function ExperienceInformation({
         <input
           type="text"
           name="location"
-          placeholder="Enter location"
+          placeholder="Enter Location"
           id="details-location"
           value={details[index].location}
           onChange={handleInputChange}
@@ -81,7 +82,7 @@ export function ExperienceInformation({
         <textarea
           rows={3}
           name="description"
-          placeholder="Enter description"
+          placeholder="Enter Description"
           value={details[index].description}
           id="details-description"
           onChange={handleInputChange}

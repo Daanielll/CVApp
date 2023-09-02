@@ -23,7 +23,7 @@ export function EducationalInformation({
   return (
     <form onSubmit={onSubmit}>
       <div className="input-div">
-        <label htmlFor="details-school">School</label>
+        <label htmlFor="details-school">School *</label>
         <input
           type="text"
           name="school"
@@ -31,6 +31,7 @@ export function EducationalInformation({
           id="details-school"
           value={details[index].school}
           onChange={handleInputChange}
+          required
         />
       </div>
       <div className="input-div">
